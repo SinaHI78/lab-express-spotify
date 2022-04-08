@@ -1,3 +1,11 @@
-<h1>{{name}}</h1>
-<img src='{{image_url}}' />
-<a href='/albums/someArtistIdGoesHere'>View Albums</a>>
+<ul>
+  {{#each artists}}
+    <li>
+      <h1>{{name}}</h1>
+      {{#if images.length}}
+        <img src='{{images.0.url}}' alt='{{name}}' />
+      {{/if}}
+      <a href='/albums/{{id}}'>View Albums</a>
+    </li>
+  {{/each}}
+</ul>
